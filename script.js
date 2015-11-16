@@ -1,4 +1,4 @@
-function sorter (a, b){
+/*function sorter (a, b){
     return a.length - b.length;
 }
 var arr = ["steve", "john", "micheal", "nicholas"];
@@ -20,3 +20,11 @@ var newNewArr1 = arr1.sort(function(a,b){
 });
 console.log(newArr1);
 console.log(newNewArr1);
+
+*/
+
+var arrNum = [1,4,7,8,4,5,6];
+var newArrNum = arrNum.map(function(a){
+    return a*a;
+});
+console.log(newArrNum);
