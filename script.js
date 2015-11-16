@@ -21,10 +21,15 @@ var newNewArr1 = arr1.sort(function(a,b){
 console.log(newArr1);
 console.log(newNewArr1);
 
-*/
-
 var arrNum = [1,4,7,8,4,5,6];
 var newArrNum = arrNum.map(function(a){
     return a*a;
 });
 console.log(newArrNum);
+*/
+
+function sqNum(a){
+    return a.num * a.num;
+}
+var arrayOfObjects = [{num:4},{num:8},{num:7}];
+console.log(arrayOfObjects.map(sqNum));
