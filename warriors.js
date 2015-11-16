@@ -25,3 +25,5 @@ Warrior.prototype = {
 var w1 = new Warrior("steve", "M");
 var w2 = new Warrior("james", "M");
 var w3 = new Warrior("jessica", "F");
+w1.faceOff(w2);
+w3.fight();
