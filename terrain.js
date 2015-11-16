@@ -1,8 +1,5 @@
 //comment
-function Tile(x,y){
-    this.x = x;
-    this.y = y;
-    this.height = function(){
+function randomHeight(){
         var a = Math.random();
         if (a<=0.33){
             return 1;
@@ -11,8 +8,8 @@ function Tile(x,y){
         } else {
             return 3;
         }
-    };
-      this.type = function(){
+    }
+function randomType(){
         var a = Math.random();
         if (a<=0.33){
             return "grass";
@@ -21,8 +18,8 @@ function Tile(x,y){
         } else {
             return "water";
         }
-    };
-      this.condition = function(){
+    }
+function randomCondition(){
         var a = Math.random();
         if (a<=0.33){
             return "frozen";
@@ -31,7 +28,13 @@ function Tile(x,y){
         } else {
             return "buring";
         }
-    };
+    }
+function Tile(x,y){
+    this.x = x;
+    this.y = y;
+    this.height = randomHeight();
+    this.type = randomType();
+    this.condition = randomCondition();
 }
 
 Tile.prototype  = {
@@ -54,4 +57,12 @@ Tile.prototype  = {
       }
       }
   };
-  
+  var array = [];
+for (var i = 0; i < 20; i++){
+    array.push([]);
+    for (var j = 0; j < 20; j++){
+        array[i].push(new Tile(i,j));
+    }
+    
+}
+console.log(array);
