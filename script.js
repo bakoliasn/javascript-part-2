@@ -26,10 +26,32 @@ var newArrNum = arrNum.map(function(a){
     return a*a;
 });
 console.log(newArrNum);
-*/
+
 
 function sqNum(a){
     return a.num * a.num;
 }
 var arrayOfObjects = [{num:4},{num:8},{num:7}];
 console.log(arrayOfObjects.map(sqNum));
+*/
+
+function operationMaker(operation){
+    switch (operation) {
+        case "add":
+            return function(a,b){
+                return a +b;
+            };
+        case "subtract":
+            return function(a,b){
+                return a-b;
+            };
+        case "mult":
+            return function(a,b){
+                return a*b;
+            };
+        case "div":
+            return function(a,b){
+                return a/b;
+            };
+    }
+}
